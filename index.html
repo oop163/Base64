@@ -4,147 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#4A00E0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>VortexTranslator - Breaking Language Barriers</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4A00E0',
-                        secondary: '#8E2DE2',
-                        accent: '#00C9FF',
-                    },
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
     <style>
         body {
             background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
             min-height: 100vh;
             overflow-x: hidden;
-            -webkit-tap-highlight-color: transparent;
+            color: white;
+            font-family: 'Poppins', sans-serif;
         }
         .glass {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            background: rgba(255, 255, 255, 0.1);
-        }
         .btn-primary {
             background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
             color: #4A00E0;
+            padding: 10px 20px;
+            border-radius: 9999px;
             transition: all 0.3s ease;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 201, 255, 0.3);
         }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-        }
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
     </style>
 </head>
-<body class="font-sans text-white">
+<body>
     <div class="container mx-auto px-4 py-8">
-        <header class="flex justify-between items-center mb-16">
-            <div class="flex items-center">
-                <svg class="w-10 h-10 text-accent animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"></path>
-                    <path d="M17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12Z" fill="currentColor"></path>
-                    <path d="M12 7V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                    <path d="M12 22V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                    <path d="M7 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                    <path d="M22 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-                </svg>
-                <span class="text-2xl font-bold ml-2 bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">VortexTranslator</span>
-            </div>
-            <nav>
-            </nav>
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold">Break Language <span class="text-accent">Barriers</span></h1>
+            <p class="text-xl mb-12">Experience real-time translation across 107+ languages with cutting-edge AI technology.</p>
+            <a href="translate.html" class="btn-primary">Start Vortex</a>
         </header>
 
-        <section class="text-center mb-24">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Break Language <br class="hidden md:block"><span class="bg-clip-text text-transparent bg-gradient-to-r from-accent to-white">Barriers</span>
-            </h1>
-            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
-                Experience real-time translation across 107+ languages with cutting-edge AI technology.
-            </p>
-            <a href="translate.html" class="btn-primary text-lg font-semibold py-4 px-8 rounded-full inline-block hover:shadow-lg transition-all duration-300 ease-in-out">
-                Start Vortex
-            </a>
-            <div class="mt-16 relative">
-                <img src="https://i.ibb.co/35rVwZmT/IMG-20250301-153147-1.png" alt="3D Globe" class="w-64 h-64 mx-auto animate-float"/>
-                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-accent rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-            </div>
-        </section>
-
         <section class="mb-24">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Powerful Features</h2>
+            <h2 class="text-3xl font-bold mb-12 text-center">Powerful Features</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card rounded-xl p-6 text-center">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
-                    </svg>
+                <div class="glass p-6 rounded-lg text-center">
                     <h3 class="text-xl font-semibold mb-2">107+ Languages</h3>
-                    <p class="text-gray-300">Translate between a vast array of global languages effortlessly.</p>
+                    <p>Translate between a vast array of global languages effortlessly.</p>
                 </div>
-                <div class="card rounded-xl p-6 text-center">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
+                <div class="glass p-6 rounded-lg text-center">
                     <h3 class="text-xl font-semibold mb-2">Real-time Translation</h3>
-                    <p class="text-gray-300">Get instant translations as you type or speak, powered by advanced AI.</p>
+                    <p>Get instant translations as you type or speak, powered by advanced AI.</p>
                 </div>
-                <div class="card rounded-xl p-6 text-center">
-                    <svg class="w-12 h-12 mx-auto mb-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
-                    </svg>
+                <div class="glass p-6 rounded-lg text-center">
                     <h3 class="text-xl font-semibold mb-2">Text-to-Speech</h3>
-                    <p class="text-gray-300">Listen to your translations with natural-sounding voice output.</p>
+                    <p>Listen to your translations with natural-sounding voice output.</p>
                 </div>
             </div>
-        </section>
-
-        <section class="text-center mb-24">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Translate?</h2>
-            <p class="text-xl mb-8">Start breaking language barriers today with VortexTranslator</p>
-            <a href="/VortexTranslator" class="btn-primary text-lg font-semibold py-4 px-8 rounded-full inline-block hover:shadow-lg transition-all duration-300 ease-in-out">
-                Start Vortex
-            </a>
         </section>
 
         <footer class="text-center">
-            <p class="mb-4">Channel <a href="https://t.me/rand2m" class="text-accent hover:underline">Random Hackers</a></p>
-            
+            <p>Channel <a href="https://t.me/rand2m" class="text-accent hover:underline">Random Hackers</a></p>
+        </footer>
+    </div>
 </body>
-                    </html>
+</html>
